@@ -68,21 +68,27 @@ Output must be in given format as in above example. For any wrong input final ou
 
 int main()
 {
-    int trainee[3][3], i, j,avg1=0, avg2=0, avg3=0;
+    int trainee[3][3], i, j,avg1=0, avg2=0, avg3=0,flag=0;
     
     for (i=0; i < 3; i++){
         for(j=0; j< 3; j++){
             scanf("%d", &trainee[i][j]);
             if (trainee[i][j] < 1 || trainee[i][j] > 100) 
-            {
+            {   
+                flag = 1;
                 trainee[i][j] = 0;
-                printf("INVALID INPUT");
-                exit(0);
             }
             
         }
     }
     
+    if (flag != 0) 
+    {
+        printf("INVALID INPUT");
+        exit(0);
+        
+    }
+        
     
     avg1 = (trainee[0][0] + trainee[1][0] + trainee[2][0] )/3;
     avg2 = (trainee[0][1] + trainee[1][1] + trainee[2][1] )/3;
