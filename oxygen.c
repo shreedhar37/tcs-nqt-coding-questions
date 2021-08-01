@@ -96,9 +96,10 @@ int main()
     }    
     
     
-    if (avg1 == avg2 == avg3)
+    if ((avg1 == avg2) && (avg1== avg3))
     {
         printf("Trainee Number: 1\nTrainee Number: 2\nTrainee Number: 3");
+        exit(0);
 
     }
     
@@ -109,12 +110,14 @@ int main()
     }
         
     if (avg2 == avg3) 
-    {printf("Trainee Number: 2\nTrainee Number: 3");
+    {
+     printf("Trainee Number: 2\nTrainee Number: 3");
      exit(0);
     }
     
     if (avg1 == avg3) 
-    {printf("Trainee Number: 1\nTrainee Number: 3");
+    {
+     printf("Trainee Number: 1\nTrainee Number: 3");
      exit(0);
     }
     
